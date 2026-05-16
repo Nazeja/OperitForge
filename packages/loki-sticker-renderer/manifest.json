@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "toolpkg_id": "com.loki.sticker_renderer",
+  "version": "0.7.0",
+  "author": [
+    "Sith",
+    "Loki"
+  ],
+  "main": "main.js",
+  "display_name": {
+    "zh": "洛玑表情包渲染器",
+    "en": "Loki Sticker Renderer"
+  },
+  "description": "将聊天消息中的 <meme>表情名</meme> 或 <sticker>表情名</sticker> XML 标签渲染为本地或外链表情包图片，支持自定义目录、外链列表、自动扫描、后缀补全和角色分配置。",
+  "env": [
+    {
+      "name": "LOKI_STICKER_DIR",
+      "description": {
+        "zh": "本地表情包目录。可留空；留空时不扫描本地目录，可只使用外链表情。示例：/sdcard/Pictures/stickers",
+        "en": "Local sticker directory. Optional; when empty, no local directory is scanned and external stickers can be used alone. Example: /sdcard/Pictures/stickers"
+      },
+      "required": false,
+      "defaultValue": "/sdcard/Download/sticker"
+    },
+    {
+      "name": "LOKI_STICKER_PROMPT_INJECT",
+      "description": {
+        "zh": "是否自动把表情包使用提示词注入 system prompt。true/false，默认 false。",
+        "en": "Whether to auto-inject sticker usage prompt into system prompt. true/false, default false."
+      },
+      "required": false,
+      "defaultValue": "false"
+    },
+    {
+      "name": "LOKI_STICKER_PROMPT_MAX",
+      "description": {
+        "zh": "提示词里允许的单次最多表情数。默认 2，可自行调大或调小。",
+        "en": "Maximum number of stickers allowed per reply in the prompt. Default 2, adjustable."
+      },
+      "required": false,
+      "defaultValue": "2"
+    },
+    {
+      "name": "LOKI_STICKER_PROMPT_EXTRA",
+      "description": {
+        "zh": "附加到表情包提示词里的自定义规则。可留空。",
+        "en": "Custom extra rules appended to the sticker usage prompt. Optional."
+      },
+      "required": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "LOKI_STICKER_PROFILES",
+      "description": {
+        "zh": "表情包配置档案 JSON。通常由管理界面自动维护；可为不同角色卡绑定不同本地表情包路径和外链表情列表。",
+        "en": "Sticker profile JSON, usually maintained by the manager UI. It can bind different local sticker paths and external sticker lists to character cards."
+      },
+      "required": false,
+      "defaultValue": ""
+    }
+  ]
+}
