@@ -1,0 +1,15 @@
+{
+  "toolpkg_id": "com.operit.bilingual_fold",
+  "version": "0.1.0",
+  "display_name": {
+    "zh": "双语折叠",
+    "en": "Bilingual Fold"
+  },
+  "description": {
+    "zh": "双语模式插件，在对话中支持<fold>译文</fold>标签，将译文渲染为可展开/收起的按钮，并配置自定义选项。",
+    "en": "A bilingual mode plugin that supports <fold>translation</fold> tags in conversations, renders translations as expandable/collapsible buttons, and provides customizable options."
+  },
+  "package_file": "com.operit.bilingual_fold-0.1.0.toolpkg",
+  "sha256": "3991c3160baf9c23f7189333b27870e57c920ffea433bbbe92e9604fc2ec0c56",
+  "source": "https://github.com/Nazeja/OperitForge/tree/main/packages/bilingual-fold"
+}
