@@ -245,8 +245,8 @@ async function scanDirs(paths) {
   for (let i = 0; i < dirs.length; i += 1) {
     const dir = dirs[i];
     try {
-      const listing = await Tools.Files.list(dir, "android");
-      const entries = Array.isArray(listing && listing.entries) ? listing.entries : [];
+      const listing = await Tools.Files.list(dir);
+      const entries = Array.isArray(listing) ? listing : (Array.isArray(listing && listing.entries) ? listing.entries : []);
       for (const e of entries) {
         if (!e || e.isDirectory) continue;
         const fileName = String(e.name || "").trim();
@@ -631,7 +631,7 @@ function Screen(ctx) {
       value: input,
       onValueChange: setInput,
       label: "表情包路径",
-      placeholder: "示例：Download/sticker",
+      placeholder: "示例：Download/sticker。若未开启 Shizuku 权限，请使用下方的外链列表。",
       singleLine: false,
       minLines: 3,
       maxLines: 8

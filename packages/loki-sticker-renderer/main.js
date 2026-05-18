@@ -448,8 +448,8 @@ async function scanStickerIndex(force, overrideDirs, overrideExternalText) {
   for (let dirIdx = 0; dirIdx < stickerDirs.length; dirIdx += 1) {
     const stickerDir = stickerDirs[dirIdx];
     try {
-      const listing = await Tools.Files.list(stickerDir, "android");
-      const entries = Array.isArray(listing && listing.entries) ? listing.entries : [];
+      const listing = await Tools.Files.list(stickerDir);
+      const entries = Array.isArray(listing) ? listing : (Array.isArray(listing && listing.entries) ? listing.entries : []);
 
       for (const entry of entries) {
         if (!entry || entry.isDirectory) continue;

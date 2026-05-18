@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "toolpkg_id": "com.loki.sticker_renderer",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "author": [
     "Sith",
     "Loki"
@@ -11,13 +11,13 @@
     "zh": "洛玑表情包渲染器",
     "en": "Loki Sticker Renderer"
   },
-  "description": "将聊天消息中的 <meme>表情名</meme> 或 <sticker>表情名</sticker> XML 标签渲染为本地或外链表情包图片，支持自定义目录、外链列表、自动扫描、后缀补全和角色分配置。",
+  "description": "将聊天消息中的 <meme>表情名</meme> 或 <sticker>表情名</sticker> XML 标签渲染为本地或外链表情包图片，支持自定义目录、外链列表、自动扫描、后缀补全和角色分配置。本地目录自动扫描需要 Shizuku 权限；未开启 Shizuku 时可使用外链列表。",
   "env": [
     {
       "name": "LOKI_STICKER_DIR",
       "description": {
-        "zh": "本地表情包目录。可留空；留空时不扫描本地目录，可只使用外链表情。示例：/sdcard/Pictures/stickers",
-        "en": "Local sticker directory. Optional; when empty, no local directory is scanned and external stickers can be used alone. Example: /sdcard/Pictures/stickers"
+        "zh": "本地表情包目录。可留空；留空时不扫描本地目录，可只使用外链表情。注意：自动扫描路径需要 Shizuku 权限，如未开启 Shizuku，请使用外链列表。示例：/sdcard/Pictures/stickers",
+        "en": "Local sticker directory. Optional; when empty, no local directory is scanned and external stickers can be used alone. Note: automatic path scanning requires Shizuku permission; if Shizuku is not enabled, use the external sticker list. Example: /sdcard/Pictures/stickers"
       },
       "required": false,
       "defaultValue": "/sdcard/Download/sticker"
